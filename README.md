@@ -67,7 +67,7 @@ Installation from [Docker registry hub](https://registry.hub.docker.com/r/fauria
 You can download the image using the following command:
 
 ```bash
-docker pull fauria/lamp
+docker pull rezurrector/lamp
 ```
 
 Environment variables
@@ -139,7 +139,7 @@ Use cases
 #### Create a temporary container for testing purposes:
 
 ```
-	docker run -i -t --rm fauria/lamp bash
+	docker run -i -t --rm rezurrector/lamp bash
 ```
 
 #### Create a temporary container to debug a web app:
