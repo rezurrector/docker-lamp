@@ -67,7 +67,7 @@ Installation from [Docker registry hub](https://registry.hub.docker.com/r/fauria
 You can download the image using the following command:
 
 ```bash
-docker pull rezurrector/lamp
+docker pull rezurrector/lamp:v.0.0.1
 ```
 
 Environment variables
@@ -139,19 +139,19 @@ Use cases
 #### Create a temporary container for testing purposes:
 
 ```
-	docker run -i -t --rm rezurrector/lamp bash
+	docker run -i -t --rm rezurrector/lamp:v.0.0.1 bash
 ```
 
 #### Create a temporary container to debug a web app:
 
 ```
-	docker run --rm -p 8080:80 -e LOG_STDOUT=true -e LOG_STDERR=true -e LOG_LEVEL=debug -v /my/data/directory:/var/www/html fauria/lamp
+	docker run --rm -p 8080:80 -e LOG_STDOUT=true -e LOG_STDERR=true -e LOG_LEVEL=debug -v /my/data/directory:/var/www/html rezurrector/lamp
 ```
 
 #### Create a container linking to another [MySQL container](https://registry.hub.docker.com/_/mysql/):
 
 ```
-	docker run -d --link my-mysql-container:mysql -p 8080:80 -v /my/data/directory:/var/www/html -v /my/logs/directory:/var/log/httpd --name my-lamp-container fauria/lamp
+	docker run -d --link my-mysql-container:mysql -p 8080:80 -v /my/data/directory:/var/www/html -v /my/logs/directory:/var/log/httpd --name my-lamp-container rezurrector/lamp:v.0.0.1
 ```
 
 #### Get inside a running container and open a MariaDB console:
